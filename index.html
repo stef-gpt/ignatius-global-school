@@ -70,6 +70,7 @@
       <div class="nav-link">Warga Sekolah<svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="dropdown">
         <button class="dd-btn" onclick="showSubpage('page-karyawan')"><svg class="dd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Karyawan &amp; Pengajar</button>
+        <button class="dd-btn" onclick="showSubpage('page-staff')"><svg class="dd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Staff & Tenaga Kerja</button>
         <button class="dd-btn" onclick="showSubpage('page-siswa')"><svg class="dd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>Siswa per Jenjang</button>
         <button class="dd-btn" onclick="showSubpage('page-osis')"><svg class="dd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>OSIS</button>
         <button class="dd-btn" onclick="showSubpage('page-alumni')"><svg class="dd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l8-5-8-5-8 5 8 5z"/><path d="M2 10v6l10 5 10-5v-6"/></svg>Alumni Berprestasi</button>
@@ -129,6 +130,7 @@
       <button class="mob-link" id="mob-btn-warga" onclick="toggleMobSub('mob-warga','mob-btn-warga')"><span>Warga Sekolah</span><svg class="mob-chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
       <div class="mob-sub" id="mob-warga"><div class="mob-sub-inner">
         <button onclick="showSubpage('page-karyawan');closeMobile()"><svg class="mob-sub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Karyawan &amp; Guru</button>
+        <button onclick="showSubpage('page-staff');closeMobile()"><svg class="mob-sub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Staff & Tenaga Kerja</button>
         <button onclick="showSubpage('page-siswa');closeMobile()"><svg class="mob-sub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>Siswa per Jenjang</button>
         <button onclick="showSubpage('page-osis');closeMobile()"><svg class="mob-sub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>OSIS</button>
         <button onclick="showSubpage('page-alumni');closeMobile()"><svg class="mob-sub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l8-5-8-5-8 5 8 5z"/></svg>Alumni</button>
@@ -241,6 +243,15 @@
   <button class="btn-back" onclick="showHome()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Kembali</button>
   <div class="sec-label">Tim Pendidik</div><h1 class="sec-title">Karyawan &amp; <em>Pengajar IGS</em></h1><div class="gold-line"></div>
   <div id="karyawan-page-wrap"></div>
+</div></div>
+
+<div class="page-view" id="page-staff"><div class="subpage">
+  <button class="btn-back" onclick="showHome()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Kembali</button>
+    <div class="sec-label">Tenaga Non-Pengajar</div><h1 class="sec-title">Staff &amp; <em>Tenaga Kerja IGS</em></h1>
+  <div class="gold-line"></div>
+  <div id="staff-page-wrap"></div>
 </div></div>
 
 <div class="page-view" id="page-siswa"><div class="subpage">
@@ -357,7 +368,7 @@
 
 <div class="page-view" id="page-faq-full"><div class="subpage">
   <button class="btn-back" onclick="showHome()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Kembali</button>
-  <div class="sec-label">Pertanyaan Umum</div><h1 class="sec-title">FAQ — <em>Frequently Asked</em></h1><div class="gold-line"></div>
+  <div class="sec-label">Pertanyaan Umum</div><h1 class="sec-title">FAQs — <em>Frequently Asked</em></h1><div class="gold-line"></div>
   <div class="faq-wrap" id="faq-pg-list"></div>
 </div></div>
 <div id="homepage">
@@ -369,8 +380,7 @@
 
       <div class="hero-slide-bg" style="background-image:url('slide1.jpg');background-color:#1a1a2e"></div>
 
-      <video autoplay muted loop playsinline class="hero-video">
-        <source src="slide1.mp4" type="video/mp4">
+      <video autoplay muted loop playsinline class="hero-video">        <source src="slide1.mp4" type="video/mp4">
       </video>
 
       <div class="hero-slide-overlay"></div>
@@ -641,10 +651,10 @@
 
 <section id="faq">
   <div class="sec-label reveal">Pertanyaan Umum</div>
-  <h2 class="sec-title reveal">FAQ — Jawaban <em>Untuk Anda</em></h2>
+  <h2 class="sec-title reveal">FAQs — Jawaban <em>Untuk Anda</em></h2>
   <p class="sec-sub reveal">Temukan jawaban atas pertanyaan yang paling sering diajukan tentang IGS.</p>
   <div class="faq-wrap"><div id="faq-list"></div></div>
-  <div style="text-align:center;margin-top:18px"><button class="btn-primary" onclick="showSubpage('page-faq-full')">Lihat Semua FAQ</button></div>
+  <div style="text-align:center;margin-top:18px"><button class="btn-primary" onclick="showSubpage('page-faq-full')">Lihat Semua FAQs</button></div>
 </section>
 
 <section id="feedback">
@@ -826,6 +836,28 @@
     <p id="mpd-desc"></p>
   </div></div>
 </div>
+<div class="modal-overlay" id="modal-sosmed" onclick="if(event.target===this)closeModal('modal-sosmed')">
+  <div class="modal" style="max-width:360px">
+    <div class="modal-header">
+      <div class="modal-header-text"><h2 id="sosmed-title">Buka Tautan</h2><p>Konfirmasi redirect</p></div>
+      <button class="modal-close" onclick="closeModal('modal-sosmed')">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <div id="sosmed-logo-wrap" style="display:flex;justify-content:center;margin-bottom:18px">
+        <div id="sosmed-logo-icon" style="width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center"></div>
+      </div>
+      <p style="font-size:13px;color:var(--text-muted);text-align:center;margin-bottom:6px">Anda akan diarahkan ke</p>
+      <p id="sosmed-url-label" style="font-size:11px;color:var(--text-muted);text-align:center;opacity:0.6;margin-bottom:20px;word-break:break-all"></p>
+      <div style="display:flex;gap:10px">
+        <button class="btn-send" id="sosmed-confirm-btn" style="flex:1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Buka Sekarang
+        </button>
+        <button onclick="closeModal('modal-sosmed')" style="flex:1;padding:10px;border-radius:8px;border:1px solid var(--border-soft);background:transparent;color:var(--text-muted);font-size:12px;font-weight:600;cursor:pointer">Batal</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
 
 /* ═══ DATA ═══ */
@@ -915,6 +947,59 @@ const KARYAWAN = {
     { name: 'Ibu Theresia Halim, M.Pd', jabatan: 'Guru Matematika SMA', tahun: '2016', init: 'TH', level: 'SMA' },
     { name: 'Bapak Felix Kurniawan', jabatan: 'Guru Fisika SMA', tahun: '2020', init: 'FK', level: 'SMA' },
     { name: 'Ibu Veronica Lie, S.S', jabatan: 'Guru Bahasa Indonesia SMA', tahun: '2015', init: 'VL', level: 'SMA' },
+  ],
+};
+
+const STAFF = {
+  admin: [
+    { name: 'Bapak Agustinus Rudi S.', jabatan: 'Kepala Tata Usaha', tahun: '2015', init: 'AR' },
+    { name: 'Ibu Bernadette Lia W.', jabatan: 'Staff Administrasi', tahun: '2018', init: 'BL' },
+    { name: 'Ibu Cecilia Marta P.', jabatan: 'Staff Administrasi', tahun: '2020', init: 'CM' },
+  ],
+  keuangan: [
+    { name: 'Ibu Dewi Fransisca H.', jabatan: 'Kepala Keuangan', tahun: '2014', init: 'DF' },
+    { name: 'Bapak Edwin Santosa P.', jabatan: 'Staff Keuangan', tahun: '2019', init: 'ES' },
+    { name: 'Ibu Felicia Indah R.', jabatan: 'Staff Keuangan', tahun: '2021', init: 'FI' },
+  ],
+  janitor: [
+    { name: 'Bapak Gatot Subroto', jabatan: 'Kepala Kebersihan', tahun: '2013', init: 'GS' },
+    { name: 'Bapak Hendra Wijaya', jabatan: 'Petugas Kebersihan', tahun: '2016', init: 'HW' },
+    { name: 'Bapak Indra Kusuma', jabatan: 'Petugas Kebersihan', tahun: '2018', init: 'IK' },
+  ],
+  multimedia: [
+    { name: 'Bapak Jonathan Kevin S.', jabatan: 'Kepala Multimedia', tahun: '2017', init: 'JK' },
+    { name: 'Ibu Kartika Dewi P.', jabatan: 'Staff Multimedia', tahun: '2020', init: 'KD' },
+    { name: 'Bapak Leonard Putra A.', jabatan: 'Videografer & Editor', tahun: '2021', init: 'LP' },
+  ],
+  hrd: [
+    { name: 'Ibu Monica Susanti W.', jabatan: 'Kepala HRD', tahun: '2015', init: 'MS' },
+    { name: 'Bapak Nathaniel Budi S.', jabatan: 'Staff HRD', tahun: '2019', init: 'NB' },
+  ],
+  perpustakaan: [
+    { name: 'Ibu Olivia Rahma D.', jabatan: 'Kepala Perpustakaan', tahun: '2016', init: 'OR' },
+    { name: 'Ibu Patricia Wulan S.', jabatan: 'Tenaga Perpustakaan', tahun: '2020', init: 'PW' },
+    { name: 'Bapak Quentin Aryo P.', jabatan: 'Tenaga Perpustakaan', tahun: '2022', init: 'QA' },
+  ],
+  security: [
+    { name: 'Bapak Robertus Hadi S.', jabatan: 'Kepala Keamanan', tahun: '2013', init: 'RH' },
+    { name: 'Bapak Stevanus Bimo W.', jabatan: 'Petugas Keamanan', tahun: '2017', init: 'SB' },
+    { name: 'Bapak Taufik Hidayat', jabatan: 'Petugas Keamanan', tahun: '2019', init: 'TH' },
+    { name: 'Bapak Ughi Prasetyo', jabatan: 'Petugas Keamanan', tahun: '2021', init: 'UP' },
+  ],
+  teknis: [
+    { name: 'Bapak Victor Emmanuel S.', jabatan: 'Kepala Tenaga Teknis', tahun: '2015', init: 'VE' },
+    { name: 'Bapak Wahyu Nugroho P.', jabatan: 'Teknisi Listrik & AC', tahun: '2018', init: 'WN' },
+    { name: 'Bapak Xaverius Dodi S.', jabatan: 'Teknisi Bangunan', tahun: '2020', init: 'XD' },
+  ],
+  marketing: [
+    { name: 'Ibu Yohana Stefani W.', jabatan: 'Kepala Marketing', tahun: '2016', init: 'YS' },
+    { name: 'Ibu Zelda Putri A.', jabatan: 'Staff Marketing', tahun: '2020', init: 'ZP' },
+    { name: 'Bapak Alfredo Candra N.', jabatan: 'Staff Marketing & Desain', tahun: '2022', init: 'AC' },
+  ],
+  it: [
+    { name: 'Bapak Bryan Kevin L.', jabatan: 'Kepala IT', tahun: '2016', init: 'BK' },
+    { name: 'Bapak Christian Dewa S.', jabatan: 'Staff IT & Jaringan', tahun: '2019', init: 'CD' },
+    { name: 'Bapak Dimas Arya P.', jabatan: 'Staff IT & Support', tahun: '2021', init: 'DA' },
   ],
 };
 
@@ -1071,7 +1156,7 @@ const ADMIN_ITEMS = [
   { name: 'Inventaris', desc: 'Peminjaman barang sekolah', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`, link: '#' },
 ];
 
-/* ═══ STARTUP ═══ */
+/* startup page */
 (function () {
   const fill = document.getElementById('su-fill'), pct = document.getElementById('su-pct');
   let p = 0;
@@ -1089,12 +1174,12 @@ const ADMIN_ITEMS = [
   }, 28);
 })();
 
-/* ═══ THEME ═══ */
+/* theme*/
 function toggleTheme() {
   document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
 }
 
-/* ═══ CLOCK ═══ */
+/* jam*/
 function updateClock() {
   const now = new Date(), h = String(now.getHours()).padStart(2, '0'), m = String(now.getMinutes()).padStart(2, '0');
   const el = document.getElementById('hw-time'), de = document.getElementById('hw-date');
@@ -1103,7 +1188,7 @@ function updateClock() {
 }
 updateClock(); setInterval(updateClock, 30000);
 
-/* ═══ HERO SLIDER ═══ */
+/* hero slider */
 let curSlide = 0, slideTimer;
 const SLIDE_DUR = 6000;
 function goSlide(n) {
@@ -1118,14 +1203,14 @@ function goSlide(n) {
 }
 goSlide(0);
 
-/* ═══ NAVBAR SCROLL ═══ */
+/* navbar scroll */
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar'), s = window.scrollY;
   nav.classList.toggle('scrolled', s > 60);
   document.getElementById('btt').classList.toggle('show', s > 400);
 }, { passive: true });
 
-/* ═══ MOBILE MENU ═══ */
+/* mobile menu */
 function toggleMobile() {
   const menu = document.getElementById('mobile-menu'), ham = document.getElementById('hamburger');
   if (menu.classList.contains('open')) { closeMobile(); }
@@ -1152,7 +1237,7 @@ function scrollToSec(id) {
   }, 80);
 }
 
-/* ═══ LANG SLIDER ═══ */
+/* lang slider*/
 let langOff = 0, langDrag = false, langDragX = 0, langDragOff = 0, langAutoTimer = null;
 function getCardW() { const c = document.querySelector('.lang-card'); return c ? c.offsetWidth + 18 : 318; }
 function initLangSlider() {
@@ -1201,7 +1286,7 @@ function langManualScroll(dir) {
 }
 window.addEventListener('resize', () => { langOff = -LANGS.length * getCardW(); applyLang(false); }, { passive: true });
 
-/* ═══ CLUB VIEW ═══ */
+/* club view */
 let currentClubView = 'grid';
 function setClubView(view) {
   currentClubView = view;
@@ -1209,7 +1294,7 @@ function setClubView(view) {
   renderClubs();
 }
 
-/* ═══ MODALS ═══ */
+/* modals */
 function openModal(id, sub) {
   document.getElementById(id).classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1224,7 +1309,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* ═══ PPDB ═══ */
+/* ppdb*/
 function switchPpdb(tab) {
   ['daftar', 'cek'].forEach(t => { document.getElementById('ppdb-' + t).classList.remove('active'); document.getElementById('ppdb-tab-' + t).classList.remove('active'); });
   document.getElementById('ppdb-' + tab).classList.add('active'); document.getElementById('ppdb-tab-' + tab).classList.add('active');
@@ -1246,7 +1331,7 @@ function cekLulus() {
   }
 }
 
-/* ═══ OSIS PANEL SWITCH ═══ */
+/* panel osis switch */
 function switchOsisPg(panelId, btn) {
   document.querySelectorAll('#page-osis .osis-tab').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('#page-osis .osis-panel').forEach(p => p.classList.remove('active'));
@@ -1255,7 +1340,7 @@ function switchOsisPg(panelId, btn) {
   if (panel) panel.classList.add('active');
 }
 
-/* ═══ ALUMNI FILTER ═══ */
+/* alumni filter */
 function filterAlumni2(kat, btn, gridId) {
   document.querySelectorAll('#page-alumni .atab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -1263,7 +1348,7 @@ function filterAlumni2(kat, btn, gridId) {
   if (grid) grid.innerHTML = buildPersonCards(kat === 'semua' ? ALUMNI : ALUMNI.filter(a => a.kat === kat), 'alumni');
 }
 
-/* ═══ PERSON CARDS ═══ */
+/* person cards */
 function buildPersonCards(data, type) {
   return data.map((d, i) => {
     const label = d.jabatan || d.dest || d.level || '';
@@ -1285,6 +1370,7 @@ function resolveData(type) {
   if (type === 'osis_sma') return OSIS_SMA;
   if (type.startsWith('karyawan_')) { const k = type.split('_')[1]; return KARYAWAN[k] || []; }
   if (type.startsWith('siswa_')) { const k = type.split('_')[1]; return SISWA[k] || []; }
+  if (type.startsWith('staff_')) { const k = type.split('_')[1]; return STAFF[k] || []; }
   return [];
 }
 
@@ -1303,11 +1389,11 @@ function showPerson(i, type) {
   if (d.kat) tags.push(d.kat.toUpperCase());
   if (d.periode) tags.push('Periode ' + d.periode);
   document.getElementById('mpd-tags').innerHTML = tags.map(t => `<span class="pmodal-tag">${t}</span>`).join('');
-  document.getElementById('mpd-desc').textContent = 'Merupakan bagian dari keluarga besar Ignatius Global School yang berdedikasi dan berprestasi.';
+  document.getElementById('mpd-desc').textContent = 'Merupakan bagian dari keluarga besar Ignatius Global School yang mendukung operasional sekolah dengan dedikasi dan profesionalisme.';
   openModal('modal-person');
 }
 
-/* ═══ DETAIL MODALS ═══ */
+/* detail modals */
 function showLangModal(i) {
   const l = LANGS[i];
   document.getElementById('ld-name').textContent = 'Program ' + l.name;
@@ -1343,7 +1429,6 @@ function showFoundModal(i) {
   const f = FOUND_DATA[i];
   document.getElementById('fd-name').textContent = f.name;
   document.getElementById('fd-role').textContent = f.role;
-  // Portrait fix — use a single column layout
   const photoEl = document.getElementById('fd-photo-ph');
   if (photoEl) {
     photoEl.textContent = f.init;
@@ -1362,7 +1447,6 @@ function toggleKarier(i) {
   const ans = document.getElementById('karier-drop-' + i);
   const isOpen = item.classList.contains('open');
 
-  // tutup semua
   KARIER_DATA.forEach((_, j) => {
     const it = document.getElementById('karier-card-' + j);
     const dr = document.getElementById('karier-drop-' + j);
@@ -1370,13 +1454,12 @@ function toggleKarier(i) {
     if (dr) dr.style.maxHeight = '0';
   });
 
-  // buka jika sebelumnya tertutup
   if (!isOpen) {
     item.classList.add('open');
     ans.style.maxHeight = ans.scrollHeight + 'px';
   }
 }
-/* ═══ LIGHTBOX ═══ */
+/* lightbox */
 function openLightbox(col) {
   const lb = document.getElementById('lightbox');
   lb.querySelector('.lb-content').style.background = `linear-gradient(135deg,${col},#0a0a0a)`;
@@ -1384,12 +1467,11 @@ function openLightbox(col) {
 }
 function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
 
-/* ═══ SPA — SMOOTH PAGE TRANSITIONS ═══ */
+/* spa */
 function showSubpage(id) {
   const homepage = document.getElementById('homepage');
   const allPages = document.querySelectorAll('.page-view');
 
-  // fade out current content
   const currentActive = document.querySelector('.page-view.active');
   if (currentActive) {
     currentActive.style.opacity = '0';
@@ -1426,7 +1508,6 @@ function showSubpage(id) {
     window.scrollTo(0, 0);
     document.body.style.overflowX = 'hidden';
     closeMobile();
-    // reinit stagger reveals for subpage content
     setTimeout(() => initRevealObserver(), 100);
   }, currentActive || homepage.style.display !== 'none' ? 180 : 0);
 }
@@ -1462,11 +1543,55 @@ function showHome() {
   }, currentActive ? 180 : 0);
 }
 
-/* ═══ WA BUBBLE ═══ */
+/* wa bubble */
 function toggleWa() {
   const panel = document.getElementById('wa-panel'), badge = document.getElementById('wa-badge');
   panel.classList.toggle('open');
   if (panel.classList.contains('open') && badge) badge.style.display = 'none';
+}
+
+/* sosmed redirect */
+const SOSMED_CONFIG = {
+  instagram: {
+    label: 'Instagram',
+    color: 'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)',
+    icon: `<svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`
+  },
+  youtube: {
+    label: 'YouTube',
+    color: 'linear-gradient(135deg,#ff0000,#cc0000)',
+    icon: `<svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`
+  },
+  tiktok: {
+    label: 'TikTok',
+    color: 'linear-gradient(135deg,#010101,#69c9d0)',
+    icon: `<svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.28 6.28 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.05a8.16 8.16 0 004.77 1.52V7.14a4.85 4.85 0 01-1-.45z"/></svg>`
+  },
+  whatsapp: {
+    label: 'WhatsApp',
+    color: 'linear-gradient(135deg,#25d366,#128c7e)',
+    icon: `<svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.784 23.26l4.344-1.392A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.368l-.359-.214-3.72 1.193 1.213-3.63-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>`
+  },
+  moodle: {
+    label: 'Moodle IGS',
+    color: 'linear-gradient(135deg,#f98012,#e05c00)',
+    icon: `<svg viewBox="0 0 24 24" fill="white" width="32" height="32"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21" stroke="white" stroke-width="2"/><line x1="12" y1="17" x2="12" y2="21" stroke="white" stroke-width="2"/></svg>`
+  },
+  email: {
+    label: 'Email',
+    color: 'linear-gradient(135deg,#4285f4,#34a853)',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="32" height="32"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`
+  },
+};
+
+function openSosmed(type, url) {
+  const cfg = SOSMED_CONFIG[type] || SOSMED_CONFIG.instagram;
+  document.getElementById('sosmed-title').textContent = 'Buka ' + cfg.label;
+  document.getElementById('sosmed-logo-icon').style.background = cfg.color;
+  document.getElementById('sosmed-logo-icon').innerHTML = cfg.icon;
+  document.getElementById('sosmed-url-label').textContent = url.replace('https://', '').replace('mailto:', '');
+  document.getElementById('sosmed-confirm-btn').onclick = () => { window.open(url, '_blank'); closeModal('modal-sosmed'); };
+  openModal('modal-sosmed');
 }
 
 /* ═══ FEEDBACK ═══ */
@@ -1682,12 +1807,12 @@ function renderAlumniPage() {
 function renderKaryawanPage() {
   const wrap = document.getElementById('karyawan-page-wrap');
   if (!wrap) return;
-  const tabsHtml = `<div class="staff-tabs">
-    <button class="staff-tab active" onclick="switchKaryawanTab('tk',this)">TK</button>
-    <button class="staff-tab" onclick="switchKaryawanTab('sd',this)">SD</button>
-    <button class="staff-tab" onclick="switchKaryawanTab('smp',this)">SMP</button>
-    <button class="staff-tab" onclick="switchKaryawanTab('sma',this)">SMA</button>
-  </div>
+  const tabsHtml = `<div class="atabs">
+  <button class="atab active" onclick="switchKaryawanTab('tk',this)">TK</button>
+  <button class="atab" onclick="switchKaryawanTab('sd',this)">SD</button>
+  <button class="atab" onclick="switchKaryawanTab('smp',this)">SMP</button>
+  <button class="atab" onclick="switchKaryawanTab('sma',this)">SMA</button>
+</div>
   <div id="karyawan-panel-tk" class="staff-panel active"><div class="cards-grid">${buildPersonCards(KARYAWAN.tk, 'karyawan_tk')}</div></div>
   <div id="karyawan-panel-sd" class="staff-panel"><div class="cards-grid">${buildPersonCards(KARYAWAN.sd, 'karyawan_sd')}</div></div>
   <div id="karyawan-panel-smp" class="staff-panel"><div class="cards-grid">${buildPersonCards(KARYAWAN.smp, 'karyawan_smp')}</div></div>
@@ -1696,7 +1821,7 @@ function renderKaryawanPage() {
 }
 
 function switchKaryawanTab(level, btn) {
-  document.querySelectorAll('#karyawan-page-wrap .staff-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#karyawan-page-wrap .atab').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('#karyawan-page-wrap .staff-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   const panel = document.getElementById('karyawan-panel-' + level);
@@ -1716,21 +1841,71 @@ function switchKaryawanTab(level, btn) {
 function renderSiswaPage() {
   const wrap = document.getElementById('siswa-page-wrap');
   if (!wrap) return;
-  const tabsHtml = `<div class="staff-tabs">
-    <button class="staff-tab active" onclick="switchSiswaTab('tk',this)">TK</button>
-    <button class="staff-tab" onclick="switchSiswaTab('sd',this)">SD</button>
-    <button class="staff-tab" onclick="switchSiswaTab('smp',this)">SMP</button>
-    <button class="staff-tab" onclick="switchSiswaTab('sma',this)">SMA</button>
-  </div>
+  const tabsHtml = `<div class="atabs">
+  <button class="atab active" onclick="switchSiswaTab('tk',this)">TK</button>
+  <button class="atab" onclick="switchSiswaTab('sd',this)">SD</button>
+  <button class="atab" onclick="switchSiswaTab('smp',this)">SMP</button>
+  <button class="atab" onclick="switchSiswaTab('sma',this)">SMA</button>
+</div>
   <div id="siswa-panel-tk" class="staff-panel active"><div class="cards-grid">${buildPersonCards(SISWA.tk, 'siswa_tk')}</div></div>
   <div id="siswa-panel-sd" class="staff-panel"><div class="cards-grid">${buildPersonCards(SISWA.sd, 'siswa_sd')}</div></div>
   <div id="siswa-panel-smp" class="staff-panel"><div class="cards-grid">${buildPersonCards(SISWA.smp, 'siswa_smp')}</div></div>
   <div id="siswa-panel-sma" class="staff-panel"><div class="cards-grid">${buildPersonCards(SISWA.sma, 'siswa_sma')}</div></div>`;
   wrap.innerHTML = tabsHtml;
 }
+function renderStaffPage() {
+  const wrap = document.getElementById('staff-page-wrap');
+  if (!wrap) return;
+  const tabs = [
+    { key: 'admin',        label: 'Admin' },
+    { key: 'keuangan',     label: 'Keuangan' },
+    { key: 'janitor',      label: 'Janitor' },
+    { key: 'multimedia',   label: 'Multimedia' },
+    { key: 'hrd',          label: 'HRD' },
+    { key: 'perpustakaan', label: 'Perpustakaan' },
+    { key: 'security',     label: 'Security' },
+    { key: 'teknis',       label: 'Teknis' },
+    { key: 'marketing',    label: 'Marketing' },
+    { key: 'it',           label: 'Staff IT' },
+  ];
+  const tabsHtml = `
+    <div class="atabs" style="flex-wrap:wrap">
+  ${tabs.map((t, i) => `<button class="atab${i === 0 ? ' active' : ''}" onclick="switchStaffTab('${t.key}',this)">${t.label}</button>`).join('')}
+</div>
+    ${tabs.map((t, i) => `
+      <div id="staff-panel-${t.key}" class="staff-panel${i === 0 ? ' active' : ''}">
+        <div class="cards-grid">${buildPersonCards(STAFF[t.key], 'staff_' + t.key)}</div>
+      </div>`).join('')}
+  `;
+  wrap.innerHTML = tabsHtml;
+}
+
+function switchStaffTab(key, btn) {
+  document.querySelectorAll('#staff-page-wrap .atab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#staff-page-wrap .staff-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const panel = document.getElementById('staff-panel-' + key);
+  if (panel) {
+    panel.classList.add('active');
+    panel.style.opacity = '0';
+    panel.style.transform = 'translateY(10px)';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        panel.style.transition = 'opacity 0.3s ease, transform 0.3s cubic-bezier(0.22,1,0.36,1)';
+        panel.style.opacity = '1';
+        panel.style.transform = 'translateY(0)';
+        setTimeout(() => {
+          panel.style.transition = '';
+          panel.style.opacity = '';
+          panel.style.transform = '';
+        }, 350);
+      });
+    });
+  }
+}
 
 function switchSiswaTab(level, btn) {
-  document.querySelectorAll('#siswa-page-wrap .staff-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#siswa-page-wrap .atab').forEach(b => b.classList.remove('active'))
   document.querySelectorAll('#siswa-page-wrap .staff-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   const panel = document.getElementById('siswa-panel-' + level);
@@ -1771,6 +1946,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderKaryawanPage();
   renderSiswaPage();
   renderOsisPages();
+  renderStaffPage();
   setTimeout(() => initLangSlider(), 100);
   initRevealObserver();
   initCounters();
